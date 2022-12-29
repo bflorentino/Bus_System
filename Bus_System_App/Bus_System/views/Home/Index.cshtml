@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    <p>
+        Bienvenidos al sistema de autobuses. En esta aplicación usted podrá gestionar sus autobuses
+        así como sus viajes. Aquí puede ver una lista de opciones a tomar:
+    </p>
+
+        <div class='d-flex flex-column mt-3'>
+            <h3>Autobuses</h3>
+            <a asp-controller="Bus" asp-action="AddBus">Registrar Autobus</a>
+            <a asp-controller="Bus" asp-action="ViewAllBuses">Ver Autobuses</a>
+        </div>
+
+        <div class='d-flex flex-column mt-3'>
+            <h3>Choferes</h3>
+            <a asp-controller="Drivers" asp-action="AddDriver">Registrar Nuevo Chofer</a>
+            <a asp-controller="Drivers" asp-action="ViewAllDrivers">Ver Choferes</a>
+        </div>
+
+        <div class='d-flex flex-column mt-3'>
+            <h3>Viajes</h3>
+            <a asp-controller="Bus">Registrar Nuevo Viaje</a>
+            <a asp-controller="Bus">Ver Viajes</a>
+        </div>
+</div>

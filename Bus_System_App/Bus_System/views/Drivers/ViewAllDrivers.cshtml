@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Bus_System.Models.View.DriversView>;
+
+<h1 class="text-center">Autobuses Registrados</h1>
+
+<table class="mt-3 table table-striped table-bordered table-hover">
+
+    <thead>
+
+        <tr class="text-center">
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Cedula</th>
+            <th scope="col">Contratado el:</th>
+            <th scope="col">Fecha de Nacimiento</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @{
+            @foreach (var driver in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(d => driver.Nombre)</td>
+                    <td>@Html.DisplayFor(d => driver.Apellido)</td>
+                    <td>@Html.DisplayFor(d => driver.Cedula)</td>
+                    <td>@Html.DisplayFor(d => driver.FechaContratado)</td>
+                    <td>@Html.DisplayFor(d => driver.FechaNacimiento)</td>
+                </tr>
+            }
+        }
+
+    </tbody>
+
+</table>

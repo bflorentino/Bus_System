@@ -1,0 +1,47 @@
+﻿@model Bus_System.Models.Binding_Models.BusBinding;
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<h1 class='text-center'>
+    Registrar Nuevo Autobus
+</h1>
+
+<form action="AddBus" method="post" class="d-flex flex-column mt-3">
+
+    @Html.LabelFor(marca => marca.Marca, null, new {@class="font-weight-bold mt-2"} )
+    @Html.EditorFor(marca => marca.Marca, new {htmlAttributes = new {@class = "form-control"}})
+    @Html.ValidationMessageFor(marca => marca.Marca, "",  new {@class = "text-danger"})
+
+    @Html.LabelFor(modelo => modelo.Modelo , null, new {@class="font-weight-bold mt-2"} )
+    @Html.EditorFor(modelo => modelo.Modelo, new {htmlAttributes = new {@class = "form-control", }})
+    @Html.ValidationMessageFor(modelo => modelo.Modelo, "", new {@class = "text-danger"})
+
+    @Html.LabelFor(anio => anio.Anio , null, new {@class="font-weight-bold mt-2"})
+    @Html.EditorFor(anio => anio.Anio, new {htmlAttributes = new {@class = "form-control", @type = "number" }})
+    @Html.ValidationMessageFor(anio => anio.Anio, "",  new {@class = "text-danger"})
+
+    @Html.LabelFor(compra => compra.Fecha_comprado , null, new {@class="font-weight-bold mt-2"})
+    @Html.EditorFor(compra => compra.Fecha_comprado,  new {htmlAttributes = new {@class = "form-control", @type="date"} })
+    @Html.ValidationMessageFor(compra => compra.Fecha_comprado, null, new {@class = "text-danger"})
+
+    @Html.LabelFor(capacidad => capacidad.Capacidad , null, new {@class="font-weight-bold mt-2"})
+    @Html.EditorFor(capacidad => capacidad.Capacidad, new {htmlAttributes = new {@class = "form-control", @type = "number" }})
+    @Html.ValidationMessageFor(capacidad => capacidad.Capacidad, "",  new {@class = "text-danger"})
+
+    <button type="submit" class="mt-3 btn btn-primary">Registrar Autobus</button>
+
+</form>
+
+@{
+    @if (ViewBag.success != null)
+    {
+         @if (ViewBag.success)
+         {
+           <script> Swal.fire("Datos Guardados", "Bus agregado exitosamente", "success" ) </script>
+         }
+          else
+          {
+           <script> Swal.fire("Error al guardar datos", "Hubo un error en el servidor al registrar el nuevo Bus", "error" ) </script>
+          }
+    }
+}

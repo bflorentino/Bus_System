@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c64ae728-a99b-48a5-8fd3-3e95754da815": {
+      "ProjectGuid": "c64ae728-a99b-48a5-8fd3-3e95754da815",
+      "DisplayName": "Data_Tier",
+      "ColorIndex": 0
+    },
+    "00082215-f45f-4a81-8ecb-c92290da0c01": {
+      "ProjectGuid": "00082215-f45f-4a81-8ecb-c92290da0c01",
+      "DisplayName": "Bus_System",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Bus_System.Models.View.BusesView>;
+
+<h1 class="text-center">Autobuses Registrados</h1>
+
+<table class="mt-3 table table-striped table-bordered table-hover">
+
+    <thead>
+
+        <tr class="text-center">
+            <th scope="col" >Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Año</th>
+            <th scope="col">Capacidad</th>
+            <th scope="col">Comprado el:</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @{
+            @foreach(var bus in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(bs => bus.Marca)</td>
+                    <td>@Html.DisplayFor(bs => bus.Modelo)</td>
+                    <td>@Html.DisplayFor(bs => bus.Anio)</td>
+                    <td>@Html.DisplayFor(bs => bus.Capacidad)</td>
+                    <td>@Html.DisplayFor(bs => bus.FechaComprado)</td>
+                </tr>
+            }
+        }
+
+    </tbody>
+
+</table>
